@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myBean" class="Consultant" autowire="byType" scope="prototype" lazy-init="true">
+    <property name="rateOfRemuneration" value="13868"></property>
+ 	 <property name="name" value="Ankit"></property>
+ 	 <property name="postal" ref="AddressBean3"></property>
+    </bean>
+    
+    <bean id="myBean2" class="Consultant">
+    <property name="rateOfRemuneration" value="13868" ></property>
+ 	 <property name="name" value="Ankit"></property>
+    </bean>
+    
+     <bean id="AddressBean3" class="Address">
+    <property name="Line1" value="Deccan" ></property>
+ 	 <property name="Line2" value="Pune"></property>
+    </bean>
+    
+     <bean id="AddressBean4" class="Address">
+    <property name="Line1" value="ShivajiNagar" ></property>
+ 	 <property name="Line2" value="Pune"></property>
+    </bean>
+    
+
+</beans>
